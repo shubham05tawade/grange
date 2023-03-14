@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/*** HOMEPAGE STYLE  ***/
+*{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.navbar-bg{
+    background-color: #004C6C;
+    padding: 1rem;
+}
+.navbar-text-color{
+    color: #fff;
+}
+nav .fa-solid{
+    color: #fff;
+}
+.navbar-brand{
+    margin-left: -1.3rem;
+}
+.signin{
+    margin-left: -1.3rem;
+}
+.navbar-nav a{
+    color: #fff !important;
+}
+.navbar-nav .nav-link{
+    padding: 1rem;
+}
+.homepage-section-1{
+    margin-top: 1.3rem;
+    width: 90%;
+    background-color: #CFCFCF;
+    border-radius: 0.6rem;
+    padding: 1.7rem;
+    font-size: 1.4rem;
+    color: #0A0A0A;
+}
+.homepage-section-1 .row{
+    margin-bottom: 1.5rem;
+}
+.homepage-section-1 .row:last-child{
+    margin-bottom: 0;
+}
+.homepage-section-1 .fa-solid{
+    color: #0A0A0A;
+}
+.homepage-section-2{
+    margin-top: 1.3rem;
+    width: 90%;
+    background-color: #CFCFCF;
+    border-radius: 0.6rem;
+    padding: 1.7rem;
+    font-size: 1.4rem;
+    font-size: 1rem;
+    color: #0A0A0A;
+}
+.homepage-section-2 .header{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.homepage-section-2 .row{
+    margin-bottom: 1rem;
+}
+.homepage-section-2 .row:last-child{
+    margin-bottom: 0;
+}
+.homepage-section-3{
+    margin-top: 1.3rem;
+    width: 90%;
+    border-radius: 0.6rem;
+    font-size: 1.4rem;
+    font-size: 1rem;
+    color: #0A0A0A;
+    margin-bottom: 8rem;
+}
+.homepage-section-3 .row{
+    margin-bottom: 1.5rem;
+}
+.homepage-section-3 .col-5{
+    background-color: #CFCFCF;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.homepage-section-3 .col-5 h1{
+    font-size: 5rem;
+}
+.homepage-section-3 .col-5 h2{
+    font-size: 2.7rem;
+}
+.bottom-nav{
+    padding: 1.3rem;
+    background-color: #004C6C;   
+    color: #fff;
+}
+.bottom-nav span{
+    display: block;
+}
+.bottom-nav a{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.bottom-nav .active{
+    color: #EBFF00;
+}
+.bottom-nav .active .fa-solid{
+    color: #EBFF00 !important;
+}
+
+/*** MODULES STYLE  ***/
+.modules-section-2{
+    margin-bottom: 8rem;
+}
+.modules-section-1 .row{
+    padding: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.modules-section-1 .row .col-2 i{
+    margin-top: 1.2rem;
+    color: #0A0A0A;
+}
+.modules-section-1 .row .col-10 h3{
+    margin-left: -2rem;
+}
+.modules-section-2 .row{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.modules-section-2 .row h5{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.modules-section-2 .row p{
+    font-size: 1.3rem;
+}
+
+/**** MODULE DETAILS STYLE  *****/
+.module-code{
+    width: 80%;
+    padding: 0.8rem;
+    padding-bottom: 0;
+    border: 1px solid #0A0A0A;
+    border-radius: 0.8rem;
+    margin-bottom: 1.7rem;
+}
+.module-code input{
+    border: none;
+    width: 3.5rem;
+    margin-top: -0.6rem;
+    background-color: #CFCFCF;
+    border: 1px solid #8b8a8a;
+}
+.module-detail-description{
+    width: 90%;
+    background-color: #D9D9D9;
+    border-radius: 0.5rem;
+    padding: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+.module-detail-description textarea{
+    width: 100%;
+    resize: none;
+    background-color: #CFCFCF;
+    padding: 1rem;
+}
+.module-detail-description h5{
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+.module-detail-description span{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.module-detail-description span input{
+    background-color: #CFCFCF;
+    border: 1px solid #8b8a8a;
+}
+.module-detail-description p{
+    font-size: 1.3rem;
+    color: #0A0A0A;
+}
+.module-detail-buttons{
+    margin-bottom: 7rem;
+    padding: 1rem;
+}
+.module-detail-buttons hr{
+    background-color: #000;
+    width: 2rem;
+    transform: rotate(90deg);
+}
+.module-detail-buttons a{
+    color: #000;
+    font-size: 1.3rem;
+}
+.module-detail-buttons a:nth-child(3){
+    color: #f00;
+}
+
+/****** MODULE ADD STYLES  *****************/
+.module-add{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.module-add input, .module-add textarea{
+    background-color: #D9D9D9;
+    border: 1px solid #ababab;
+    padding: 0.9rem;
+}
+.module-add p{
+    margin-top: 2rem;
+    font-weight: 600;
+}
+.module-add .save{
+    background-color: transparent;
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 8rem;
+    margin-left: 10%;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+
+
+.modules-section-2 input[type=checkbox]{
+    margin-top: 2rem;
+    -ms-transform: scale(2);
+    -moz-transform: scale(2); 
+    -webkit-transform: scale(2); 
+    padding: 10px;
+    background-color: #8b8a8a;
+}
+.delete{
+    background-color: transparent;
+    width: 80%;
+    padding: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 8rem;
+    margin-left: 9.5%;
+    text-align: center;
+    color: red;
+    border: 1px solid #000;
+}
