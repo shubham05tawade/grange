@@ -28,6 +28,9 @@ nav .fa-solid{
 .navbar-nav .nav-link{
     padding: 1rem;
 }
+.navbar-text-color{
+    color: #fff !important;
+}
 .homepage-section-1{
     margin-top: 1.3rem;
     width: 90%;
@@ -101,7 +104,7 @@ nav .fa-solid{
     color: #fff;
     font-size: 1.2rem;
 }
-.bottom-nav .active{
+.bottom-nav .active small{
     color: #EBFF00;
 }
 .bottom-nav .active .fa-solid{
@@ -244,5 +247,16 @@ nav .fa-solid{
     margin-left: 9.5%;
     text-align: center;
     color: red;
+    border: 1px solid #000;
+}
+.module-edit-name{
+    padding: 0.5rem;
+    border: none;
+    background-color: #D9D9D9;
+    border: 1px solid #ababab;
+    margin-left: -2rem;
+}
+.save{
+    width: 100%;
     border: 1px solid #000;
 }

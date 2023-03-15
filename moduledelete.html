@@ -1,125 +1,16 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Grange</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-bg">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <a class="navbar-brand navbar-text-color" href="#">GrangeMobile</a>
-        <span class="signin">
-          <i class="fa-solid fa-power-off signin"></i>
-        </span>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Edit Modules</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Add Modules</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Delete Modules</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">See all Modules</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
-
-    <div class="container modules-section-1">
-        <div class="row justify-content-around">
-            <div class="col-2">
-                <a href="">
-                  <i class="fa-solid fa-angle-left fa-xl"></i>
-                </a>
-            </div>
-            <div class="col-10 text-center">
-                <h3>Delete Modules</h3>
-            </div>
-        </div>
-    </div>
-    <div class="container modules-section-2">
-      <div class="row justify-content-around p-3 flex-row-reverse">
-          <div class="col-8 align-middle">
-              <span>
-                <h5 class="mt-2">TU910</h5>
-                <p>Accounting</p>
-              </span>
-          </div>
-          <div class="col-2 text-center align-middle">
-            <input type="checkbox" name="" id="" class="form-control">
-          </div>
+<div class="container modules-section-1">
+  <div class="row justify-content-around">
+      <div class="col-2">
+          <a href="">
+            <i class="fa-solid fa-angle-left fa-xl"></i>
+          </a>
       </div>
-
-      <div class="row justify-content-around p-3 flex-row-reverse">
-        <div class="col-8 align-middle">
-            <span>
-              <h5 class="mt-2">TU294</h5>
-              <p>Creative Digital Media & UX</p>
-            </span>
-        </div>
-        <div class="col-2 text-center align-middle">
-            <input type="checkbox" name="" id="" class="form-control">
-        </div>
-    </div>
-
-    <div class="row justify-content-around p-3 flex-row-reverse">
-      <div class="col-8 align-middle">
-          <span>
-            <h5 class="mt-2">TU103</h5>
-            <p>Digital Marketing</p>
-          </span>
+      <div class="col-10 text-center">
+          <h3>Delete Modules</h3>
       </div>
-      <div class="col-2 text-center align-middle">
-        <input type="checkbox" name="" id="" class="form-control">
-      </div>
-    </div>
   </div>
+</div>
+<div class="container modules-section-2">
+</div>
 
-  <input type="submit" value="Delete" class="btn delete">
-
-    <nav class="navbar fixed-bottom d-flex flex-row bottom-nav justify-content-around text-center">
-      <span>
-        <a href="./index.html" class="active">
-          <i class="fa-solid fa-house"></i><br/>
-          <small>Home</small>
-        </a>
-      </span>
-      <span>
-        <a href="./index.html">
-          <i class="fa-solid fa-graduation-cap"></i><br/>
-          <small>Students</small>
-        </a>
-      </span>
-      <span>
-        <a href="./index.html">
-          <i class="fa-solid fa-person-chalkboard"></i><br/>
-          <small>Lecturers</small>
-        </a>
-      </span>
-      <span>
-        <a href="./index.html">
-          <i class="fa-solid fa-book-open"></i><br/>
-          <small>Modules</small>
-        </a>
-      </span>
-    </nav>
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/d87f22bfa0.js" crossorigin="anonymous"></script>
-  </body>
-</html>
+<input type="submit" value="Delete" class="btn delete" id="module-delete-btn">

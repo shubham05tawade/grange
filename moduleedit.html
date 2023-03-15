@@ -1,10 +1,10 @@
 <div class="container modules-section-1">
   <div class="row justify-content-around">
       <div class="col-2">
-          <i class="fa-solid fa-angle-left fa-xl"></i>
+          <i class="fa-solid fa-angle-left fa-xl" id="module-detail"></i>
       </div>
       <div class="col-10 text-center">
-          <input type="text" id="module-edit-name" value="">
+          <input type="text" id="module-edit-name" class="module-edit-name" value="">
       </div>
   </div>
 </div>
@@ -12,6 +12,7 @@
 <div class="container d-flex flex-row justify-content-center module-code align-items-center">
   <h5>Code: &nbsp;</h5>
   <input type="text" value="" id="module-edit-code">
+  <input type="hidden" value="" id="module-edit-index">
 </div>
 
 <div class="container module-detail-description">
@@ -42,9 +43,8 @@
 </div>
 
 <div class="container module-detail-buttons d-flex flex-row w-50 align-items-center justify-content-center">
-  <a href="">Edit</a>
-  <hr/>
-  <a href="">Delete</a>
+  <a class="btn save" id="module-save-button">Save</a>
 </div>
+
 
 

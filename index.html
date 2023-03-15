@@ -16,23 +16,23 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
-        <a class="navbar-brand navbar-text-color" href="#">GrangeMobile</a>
+        <a class="navbar-brand navbar-text-color" id="module-home">GrangeMobile</a>
         <span class="signin">
           <i class="fa-solid fa-power-off signin"></i>
         </span>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Edit Modules</a>
+              <a class="nav-link" id="module-view">Edit Modules</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Add Modules</a>
+              <a class="nav-link" id="module-add">Add Modules</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Delete Modules</a>
+              <a class="nav-link" id="module-delete">Delete Modules</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">See all Modules</a>
+              <a class="nav-link" id="module-view">See all Modules</a>
             </li>
           </ul>
         </div>
@@ -42,21 +42,21 @@
 
     </div>
 
-    <nav class="navbar fixed-bottom d-flex flex-row bottom-nav justify-content-around text-center">
+    <nav class="navbar fixed-bottom d-flex flex-row bottom-nav justify-content-around text-center" id="bottom-nav">
       <span>
-        <a href="./index.html" class="active">
+        <a id="module-home" class="active">
           <i class="fa-solid fa-house"></i><br/>
           <small>Home</small>
         </a>
       </span>
       <span>
-        <a href="./index.html">
+        <a id="module-home">
           <i class="fa-solid fa-graduation-cap"></i><br/>
           <small>Students</small>
         </a>
       </span>
       <span>
-        <a href="./index.html">
+        <a id="module-home">
           <i class="fa-solid fa-person-chalkboard"></i><br/>
           <small>Lecturers</small>
         </a>
@@ -75,6 +75,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d87f22bfa0.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-    <script src="./jquery/homepage.js"></script>
+    <script src="./jquery/modules.js"></script>
   </body>
 </html>
