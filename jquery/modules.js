@@ -41,7 +41,7 @@ $(document).ready(function() {
         success: function(data) {
           $('.index-page').html(data);
         }
-    });
+    })
 
     $('#modules-page').click((event) => {
         event.preventDefault();
@@ -53,8 +53,9 @@ $(document).ready(function() {
         }).done(() => {
             var items = [];
             modules.forEach((val) => {
+                var val3 = JSON.stringify(val);
                 items.push("<div class='row justify-content-between p-3'><div class='col-7 align-middle'><span><h5 class='mt-2'>"+val.id+"</h5><p>"+val.name+"</p></span></div><div class='col-3 text-center align-middle'><i class='fa-solid fa-arrow-right mt-4 module-details-link'id="+val.id+"></i></div></div>");
-            })
+            });
             $(items.join("")).appendTo("#modules-section-2");       
             $('.navbar-collapse').removeClass('show'); 
             $('#bottom-nav span:nth-child(1)').children("a").removeClass("active");
@@ -127,16 +128,27 @@ $(document).ready(function() {
         var index  = $('#module-detail-index').val();
         modules.splice(index, 1);
         $.ajax({
-            url: 'homepage.html',
+            url: 'modules.html',
             success: function(data) {
               $('.index-page').html(data);
             }   
-        }).done(()=>{
+        }).done(() => {
             $(window).scrollTop(0);
+            var items = [];
+            modules.forEach((val) => {
+                var val3 = JSON.stringify(val);
+                items.push("<div class='row justify-content-between p-3'><div class='col-7 align-middle'><span><h5 class='mt-2'>"+val.id+"</h5><p>"+val.name+"</p></span></div><div class='col-3 text-center align-middle'><i class='fa-solid fa-arrow-right mt-4 module-details-link'id="+val.id+"></i></div></div>");
+            });
+            $(items.join("")).appendTo("#modules-section-2");
             $('.navbar-collapse').removeClass('show'); 
-            $('#bottom-nav span:nth-child(1)').children("a").addClass("active");
-            $('#bottom-nav span:nth-child(4)').children("a").removeClass("active");
-        })
+            $('body').removeClass("modal-open");
+            $('div').removeClass('modal-backdrop');
+            $('div').removeClass('fade');
+            $('div').removeClass('show');
+            $('.navbar-collapse').removeClass('show'); 
+            $('#bottom-nav span:nth-child(1)').children("a").removeClass("active");
+            $('#bottom-nav span:nth-child(4)').children("a").addClass("active");
+        });
     })
 
     $(document).on('click','#module-save-button', function(event){
@@ -159,15 +171,6 @@ $(document).ready(function() {
             modules[index].lecturers = [];
             lecturers.map((lecturer) => {
                 modules[index].lecturers.push(lecturer);
-            })
-            $.ajax({
-                url: 'homepage.html',
-                success: function(data) {
-                  $('.index-page').html(data);
-                }   
-            }).done(()=> {
-                $(window).scrollTop(0);
-                $('.navbar-collapse').removeClass('show'); 
             })
         }
     });
@@ -294,29 +297,11 @@ $(document).ready(function() {
                     time: time,
                     location: location
                 }
-            })
-            
-            $.ajax({
-                url: 'homepage.html',
-                success: function(data) {
-                  $('.index-page').html(data);
-                }   
-            }).done(() => {
-                $(window).scrollTop(0);
-                $('.navbar-collapse').removeClass('show'); 
-            })
+            });
         }
     });
 
-
-    $(document).on('click','#module-delete-btn', function(event){
-        event.preventDefault();
-        modules.map((val, key) => {
-            if($('#checkbox-delete-'+key).is(":checked")){
-                modules.splice(key, 1);
-            }
-        });
-
+    $(document).on('click','#module-add-next', function(event){
         $.ajax({
             url: 'homepage.html',
             success: function(data) {
@@ -325,9 +310,59 @@ $(document).ready(function() {
         }).done(() => {
             $(window).scrollTop(0);
             $('.navbar-collapse').removeClass('show'); 
+            $('body').removeClass("modal-open");
+            $('div').removeClass('modal-backdrop');
+            $('div').removeClass('fade');
+            $('div').removeClass('show');
+            $('.navbar-collapse').removeClass('show'); 
             $('#bottom-nav span:nth-child(1)').children("a").addClass("active");
             $('#bottom-nav span:nth-child(4)').children("a").removeClass("active");
-        })
+        });
+    });
+
+    $(document).on('click','#module-edit-next', function(event){
+        $.ajax({
+            url: 'homepage.html',
+            success: function(data) {
+              $('.index-page').html(data);
+            }   
+        }).done(() => {
+            $(window).scrollTop(0);
+            $('.navbar-collapse').removeClass('show'); 
+            $('body').removeClass("modal-open");
+            $('div').removeClass('modal-backdrop');
+            $('div').removeClass('fade');
+            $('div').removeClass('show');
+            $('.navbar-collapse').removeClass('show'); 
+            $('#bottom-nav span:nth-child(1)').children("a").addClass("active");
+            $('#bottom-nav span:nth-child(4)').children("a").removeClass("active");
+        });
+    });
+
+    $(document).on('click','#module-delete-btn', function(event){
+        event.preventDefault();
+        modules.map((val, key) => {
+            if($('#checkbox-delete-'+key).is(":checked")){
+                modules.splice(key, 1);
+            }
+        });
+        $.ajax({
+            url: 'homepage.html',
+            success: function(data) {
+              $('.index-page').html(data);
+            }   
+        }).done(() => {
+            $(window).scrollTop(0);
+            $('.navbar-collapse').removeClass('show'); 
+            $('body').removeClass("modal-open");
+            $('div').removeClass('modal-backdrop');
+            $('div').removeClass('fade');
+            $('div').removeClass('show');
+            $('.navbar-collapse').removeClass('show'); 
+            $('#bottom-nav span:nth-child(1)').children("a").addClass("active");
+            $('#bottom-nav span:nth-child(4)').children("a").removeClass("active");
+        });
+
     });
 
 });

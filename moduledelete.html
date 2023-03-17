@@ -13,4 +13,17 @@
 <div class="container modules-section-2">
 </div>
 
-<input type="submit" value="Delete" class="btn delete" id="module-delete-btn">
+<input type="submit" value="Delete" class="btn delete" data-toggle="modal" data-target=".delete-example-modal-sm">
+
+<div class="modal fade delete-example-modal-sm row" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered col-10">
+      <div class="modal-content">
+          <i class="fa-regular fa-circle-check"></i>
+          <small>Are you sure you want to delete the module?</small>
+          <span class="edit-button-group d-flex align-items-center justify-content-around">
+            <button class="btn btn-danger" id="module-delete-btn">Delete</button>
+            <button class="btn btn-light" data-dismiss="modal" aria-label="Close">Cancel</button>
+          </span>
+      </div>
+  </div>
+</div>

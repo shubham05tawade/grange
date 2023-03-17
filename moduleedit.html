@@ -43,7 +43,27 @@
 </div>
 
 <div class="container module-detail-buttons d-flex flex-row w-50 align-items-center justify-content-center">
-  <a class="btn save" id="module-save-button">Save</a>
+  <a class="btn save" id="module-save-button" data-toggle="modal" data-target=".edit-example-modal-sm">Save</a>
+</div>
+
+<div class="modal fade edit-example-modal-sm row" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered col-10">
+      <div class="modal-content">
+          <i class="fa-regular fa-circle-check"></i>
+          <small>Your Module has been successfully Updated</small>
+          <button class="btn btn-success" id="module-edit-next">Done</button>
+      </div>  
+  </div>
+</div>
+
+<div class="modal fade delete-example-modal-sm row" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered col-10">
+      <div class="modal-content">
+          <i class="fa-regular fa-circle-check"></i>
+          <small>Your Module has been successfully Added</small>
+          <button class="btn btn-success" id="module-add-next">Done</button>
+      </div>
+  </div>
 </div>
 
 

@@ -41,6 +41,14 @@
       <label for="moduleTime">Location:</label>
       <input type="text" name="moduleLocation" id="module-add-location" class="form-control">
   </div>
-  <input type="submit" class="btn save" id="module-add-save" value="Add Module">
+  <input type="submit" class="btn save" id="module-add-save" data-toggle="modal" data-target=".bd-example-modal-sm" value="Add Module">
 </form>
-    
+<div class="modal fade bd-example-modal-sm row" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered col-10">
+        <div class="modal-content">
+            <i class="fa-regular fa-circle-check"></i>
+            <small>Your Module has been successfully Added</small>
+            <button class="btn btn-success" id="module-add-next">Done</button>
+        </div>
+    </div>
+</div>
