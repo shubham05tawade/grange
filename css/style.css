@@ -269,9 +269,16 @@ nav .fa-solid{
 .modal-content{
     padding: 1.7rem 2rem;
 }
-.modal-content i{
+.modal-content .fa-circle-check{
     font-size: 3.5rem;
     color: #28a745;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+.modal-content .fa-circle-exclamation{
+    color: #dc3545 !important;
+    font-size: 3.5rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;
