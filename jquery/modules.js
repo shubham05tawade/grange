@@ -1,4 +1,4 @@
-var modules = [
+var modulesJSON = JSON.stringify([
         {
             "id": "TU248",
             "name": "Applied Statistics",
@@ -32,7 +32,7 @@ var modules = [
                 "location": "Online"
             }
         }
-];
+]);
 
 
 $(document).ready(function() {
@@ -40,6 +40,10 @@ $(document).ready(function() {
         url: 'homepage.html',
         success: function(data) {
           $('.index-page').html(data);
+        }
+    }).done(()=>{
+        if(localStorage.getItem("modules")==null || localStorage.getItem("modules")==undefined){
+            localStorage.setItem("modules",modulesJSON);
         }
     })
 
@@ -52,6 +56,7 @@ $(document).ready(function() {
             }
         }).done(() => {
             var items = [];
+            var modules = JSON.parse(localStorage.getItem("modules"))
             modules.forEach((val) => {
                 var val3 = JSON.stringify(val);
                 items.push("<div class='row justify-content-between p-3'><div class='col-7 align-middle'><span><h5 class='mt-2'>"+val.id+"</h5><p>"+val.name+"</p></span></div><div class='col-3 text-center align-middle'><i class='fa-solid fa-arrow-right mt-4 module-details-link'id="+val.id+"></i></div></div>");
@@ -72,6 +77,7 @@ $(document).ready(function() {
         })
         .done(() => {
             $('.navbar-collapse').removeClass('show'); 
+            var modules = JSON.parse(localStorage.getItem("modules"))
             modules.forEach((val, key) => {
                 if(val.id == event.target.id){
                     $('#module-detail-code').text(val.id);
@@ -126,7 +132,9 @@ $(document).ready(function() {
     $(document).on('click','#module-delete-button', function(event){
         event.preventDefault();
         var index  = $('#module-detail-index').val();
+        var modules = JSON.parse(localStorage.getItem("modules"));
         modules.splice(index, 1);
+        localStorage.setItem("modules", JSON.stringify(modules))
         $.ajax({
             url: 'modules.html',
             success: function(data) {
@@ -135,6 +143,7 @@ $(document).ready(function() {
         }).done(() => {
             $(window).scrollTop(0);
             var items = [];
+            var modules = JSON.parse(localStorage.getItem("modules"))
             modules.forEach((val) => {
                 var val3 = JSON.stringify(val);
                 items.push("<div class='row justify-content-between p-3'><div class='col-7 align-middle'><span><h5 class='mt-2'>"+val.id+"</h5><p>"+val.name+"</p></span></div><div class='col-3 text-center align-middle'><i class='fa-solid fa-arrow-right mt-4 module-details-link'id="+val.id+"></i></div></div>");
@@ -162,6 +171,7 @@ $(document).ready(function() {
         var lecturers = $('#module-edit-lecturers').val().split("\n");
         var index = $('#module-edit-index').val();
         if(id != null && name != null && description != null && date != null && time != null && location !=null && lecturers != null && id != "" && name != ""  && description != "" && date != "" && time != "" && location != "" && lecturers != ""){
+            var modules = JSON.parse(localStorage.getItem("modules"));
             modules[index].id = id;
             modules[index].name = name;
             modules[index].description = description;
@@ -172,6 +182,8 @@ $(document).ready(function() {
             lecturers.map((lecturer) => {
                 modules[index].lecturers.push(lecturer);
             })
+            localStorage.setItem("modules", JSON.stringify(modules))
+            console.log(localStorage.getItem("modules"))
         }
     });
 
@@ -201,6 +213,7 @@ $(document).ready(function() {
         }).done(() => {
             $(window).scrollTop(0);
             var items = [];
+            var modules = JSON.parse(localStorage.getItem("modules"))
             modules.map((val, key) => {
                 items.push("<div class='row justify-content-around p-3 flex-row-reverse'><div class='col-8 align-middle'><span><h5 class='mt-2'>"+val.id+"</h5><p>"+val.name+"</p></span></div><div class='col-2 text-center align-middle'><input type='checkbox' name='"+key+"' id='checkbox-delete-"+key+"' class='form-control' value=''></div></div>");
             })
@@ -236,6 +249,7 @@ $(document).ready(function() {
         }).done(() => {
             $(window).scrollTop(0);
             var items = [];
+            var modules = JSON.parse(localStorage.getItem("modules"))
             modules.forEach((val) => {
                 items.push("<div class='row justify-content-between p-3'><div class='col-7 align-middle'><span><h5 class='mt-2'>"+val.id+"</h5><p>"+val.name+"</p></span></div><div class='col-3 text-center align-middle'><i class='fa-solid fa-arrow-right mt-4 module-details-link'id="+val.id+"></i></div></div>");
             })
@@ -257,6 +271,7 @@ $(document).ready(function() {
         }).done(() => {
             $(window).scrollTop(0);
             $('.navbar-collapse').removeClass('show'); 
+            var modules = JSON.parse(localStorage.getItem("modules"))
             modules.forEach((val, key) => {
                 if(key == index){
                     $('#module-detail-code').text(val.id);
@@ -287,6 +302,7 @@ $(document).ready(function() {
         var location = $('#module-add-location').val();
         var lecturers = $('#module-add-lecturers').val().split("\n");
         if(id != null && name != null && description != null && date != null && time != null && location !=null && lecturers != null && id != "" && name != ""  && description != "" && date != "" && time != "" && location != "" && lecturers != ""){
+            var modules = JSON.parse(localStorage.getItem("modules"))
             modules.push({
                 id: id,
                 name: name,
@@ -298,6 +314,7 @@ $(document).ready(function() {
                     location: location
                 }
             });
+            localStorage.setItem("modules", JSON.stringify(modules));
         }
     });
 
@@ -341,11 +358,13 @@ $(document).ready(function() {
 
     $(document).on('click','#module-delete-btn', function(event){
         event.preventDefault();
+        var modules = JSON.parse(localStorage.getItem("modules"))
         modules.map((val, key) => {
             if($('#checkbox-delete-'+key).is(":checked")){
                 modules.splice(key, 1);
             }
         });
+        localStorage.setItem("modules", JSON.stringify(modules));
         $.ajax({
             url: 'homepage.html',
             success: function(data) {
